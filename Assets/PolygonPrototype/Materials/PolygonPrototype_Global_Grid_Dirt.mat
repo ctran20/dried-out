@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PolygonPrototype_Global_Grid_02
+  m_Name: PolygonPrototype_Global_Grid_Dirt
   m_Shader: {fileID: 4800000, guid: d6f2a6aa53be2674580ae1599bb9a33e, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -29,5 +29,5 @@ Material:
     - _OverlayAmount: 0.5
     - __dirty: 1
     m_Colors:
-    - _BaseColor: {r: 0.11525452, g: 0.6981132, b: 0.19473532, a: 0}
+    - _BaseColor: {r: 0.6603774, g: 0.43636027, b: 0.23985404, a: 0}
   m_BuildTextureStacks: []
