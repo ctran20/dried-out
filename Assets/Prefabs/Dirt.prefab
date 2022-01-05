@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 630017039518504625, guid: 5892831b82cd14f43b83c1da2501e817, type: 3}
+      propertyPath: isPlaceable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1107127629300330152, guid: 5892831b82cd14f43b83c1da2501e817, type: 3}
       propertyPath: m_Name
       value: Dirt
