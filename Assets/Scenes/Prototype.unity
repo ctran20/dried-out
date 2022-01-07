@@ -853,7 +853,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.5137586, y: -0, z: -0, w: 0.85793483}
-  m_LocalPosition: {x: 17.66, y: 28.95, z: 1.62}
+  m_LocalPosition: {x: 17.66, y: 30.97, z: -2.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1433,7 +1433,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8396114436619043212, guid: d9f5cd34f20cdd14a9265477f803a546, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.000015
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8396114436619043212, guid: d9f5cd34f20cdd14a9265477f803a546, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1566,6 +1566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 1316981293597076, guid: 2f3e27eecb190e44a9af50723c394274, type: 3}
+  poolSize: 5
   spawnTimer: 1
 --- !u!4 &1667038144
 Transform:
