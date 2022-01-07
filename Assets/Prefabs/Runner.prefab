@@ -841,6 +841,7 @@ GameObject:
   - component: {fileID: 4391027436923427249}
   - component: {fileID: 7745110923978959320}
   - component: {fileID: 2127485938285068904}
+  - component: {fileID: 657139302648914557}
   m_Layer: 0
   m_Name: Runner
   m_TagString: Untagged
@@ -929,6 +930,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 6
+--- !u!114 &657139302648914557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316981293597076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e31419ca9e3b12041bab82d5363acf47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldDrop: 25
+  penalty: 25
 --- !u!1 &1326360802897878
 GameObject:
   m_ObjectHideFlags: 0
@@ -2420,7 +2435,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7185937970314254829}
-  - component: {fileID: 6777459985614540300}
+  - component: {fileID: 6850020902502656004}
   m_Layer: 0
   m_Name: Center
   m_TagString: Center
@@ -2442,7 +2457,7 @@ Transform:
   m_Father: {fileID: 4580766925885248}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6777459985614540300
+--- !u!114 &6850020902502656004
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2451,6 +2466,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 3411247320008349982}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e31419ca9e3b12041bab82d5363acf47, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c6da8fb4e885a54bb91a8761c51f8e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
