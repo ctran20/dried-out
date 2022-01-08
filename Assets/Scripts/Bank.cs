@@ -17,13 +17,13 @@ public class Bank : MonoBehaviour
     }
 
     public void Deposit(int amount){
-        UpdateDisplay();
         currentBalance += Mathf.Abs(amount);
+        UpdateDisplay();
     }
     public void Withdraw(int amount)
     {
-        UpdateDisplay();
         currentBalance -= Mathf.Abs(amount);
+        UpdateDisplay();
     }
 
     private void UpdateDisplay()
