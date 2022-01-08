@@ -930,6 +930,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 6
+  currentHitPoints: 0
 --- !u!114 &657139302648914557
 MonoBehaviour:
   m_ObjectHideFlags: 0
