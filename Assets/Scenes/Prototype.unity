@@ -1905,7 +1905,7 @@ GameObject:
   - component: {fileID: 364716943}
   - component: {fileID: 364716942}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GridManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1923,11 +1923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eed5795acf2d1d54bb72ecef2ceb9b48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  node:
-    coordinates: {x: 2, y: 1}
-    isWalkable: 1
-    isExplored: 0
-    isPath: 0
+  gridSize: {x: 0, y: 0}
 --- !u!4 &364716943
 Transform:
   m_ObjectHideFlags: 0
