@@ -21,7 +21,7 @@ public class CoordinateLabeler : MonoBehaviour
     {
         gridManager = FindObjectOfType<GridManager>();
         label = GetComponent<TextMeshPro>();
-        label.enabled = false;
+        label.enabled = true;
         DisplayCoordinates();
     }
 
@@ -34,6 +34,7 @@ public class CoordinateLabeler : MonoBehaviour
         }
 
         SetLabelColor();
+        ToggleLabels();
     }
 
     private void SetLabelColor()
@@ -53,7 +54,7 @@ public class CoordinateLabeler : MonoBehaviour
         {
             label.color = exploredColor;
         }else{
-            label.color = default;
+            label.color = defaultColor;
         }
     }
 
