@@ -11,6 +11,18 @@ PrefabInstance:
       propertyPath: isPlaceable
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 843488146896206577, guid: 5892831b82cd14f43b83c1da2501e817, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 843488146896206577, guid: 5892831b82cd14f43b83c1da2501e817, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 843488146896206577, guid: 5892831b82cd14f43b83c1da2501e817, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1107127629300330152, guid: 5892831b82cd14f43b83c1da2501e817, type: 3}
       propertyPath: m_Name
       value: Water
@@ -57,6 +69,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1107127629300330159, guid: 5892831b82cd14f43b83c1da2501e817, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3218438695038541007, guid: 5892831b82cd14f43b83c1da2501e817, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4429440270264407971, guid: 5892831b82cd14f43b83c1da2501e817, type: 3}

@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fec4ff3450663d419738024c2dfb97f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  towerMenu: {fileID: 3218438695038541007}
   towerPrefab: {fileID: 4031413065968188050, guid: 0933b1b322ba5984aa9f9d325ed30e9a, type: 3}
   isPlaceable: 1
 --- !u!65 &6226406340693737524
@@ -322,7 +323,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8932691575923565674
 RectTransform:
   m_ObjectHideFlags: 0
@@ -756,7 +757,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5386376362032113143}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 630017039518504625}
+        m_TargetAssemblyTypeName: Waypoint, Assembly-CSharp
+        m_MethodName: PlaceCannon
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3218438695038541007}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5272507549740934373
 GameObject:
   m_ObjectHideFlags: 0
