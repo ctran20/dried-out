@@ -48,7 +48,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerMenu: {fileID: 3218438695038541007}
-  towerPrefab: {fileID: 4031413065968188050, guid: 0933b1b322ba5984aa9f9d325ed30e9a, type: 3}
+  cannonPrefab: {fileID: 4031413065968188050, guid: 0933b1b322ba5984aa9f9d325ed30e9a, type: 3}
+  archerPrefab: {fileID: 3635999234112455870, guid: cd757cbedf927b44aab3d00765976445, type: 3}
   isPlaceable: 1
 --- !u!65 &6226406340693737524
 BoxCollider:
@@ -304,7 +305,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 949426354537974962}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 630017039518504625}
+        m_TargetAssemblyTypeName: Waypoint, Assembly-CSharp
+        m_MethodName: PlaceArcher
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3218438695038541007}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3218438695038541007
 GameObject:
   m_ObjectHideFlags: 0
