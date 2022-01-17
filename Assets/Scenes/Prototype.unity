@@ -11742,7 +11742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startCoordinates: {x: 0, y: 0}
-  destinateCoordinates: {x: 3, y: 2}
+  destinationCoordinates: {x: 3, y: 2}
 --- !u!1001 &1836292484
 PrefabInstance:
   m_ObjectHideFlags: 0
