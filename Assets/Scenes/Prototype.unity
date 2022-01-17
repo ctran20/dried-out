@@ -1923,7 +1923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eed5795acf2d1d54bb72ecef2ceb9b48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridSize: {x: 0, y: 0}
+  gridSize: {x: 5, y: 5}
 --- !u!4 &364716943
 Transform:
   m_ObjectHideFlags: 0
@@ -11741,11 +11741,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc25ed59304e5034e905c4b717c9cabf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSearchNode:
-    coordinates: {x: 0, y: 0}
-    isWalkable: 0
-    isExplored: 0
-    isPath: 0
+  startCoordinates: {x: 0, y: 0}
+  destinateCoordinates: {x: 3, y: 2}
 --- !u!1001 &1836292484
 PrefabInstance:
   m_ObjectHideFlags: 0
