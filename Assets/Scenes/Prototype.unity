@@ -4577,6 +4577,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1006320063}
     m_Modifications:
+    - target: {fileID: 630017039518504625, guid: 5892831b82cd14f43b83c1da2501e817, type: 3}
+      propertyPath: archerPrefab
+      value: 
+      objectReference: {fileID: -2902630063531866264, guid: 3a7476b3e859f6144bcb335bf6edde00, type: 3}
     - target: {fileID: 843488146896206577, guid: 5892831b82cd14f43b83c1da2501e817, type: 3}
       propertyPath: m_text
       value: 1,-1
@@ -13674,6 +13678,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3238022229982499955, guid: 3aa0327e48b307a42b51e1e34692bb34, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -13.400024
+      objectReference: {fileID: 0}
     - target: {fileID: 4320969294101784426, guid: 3aa0327e48b307a42b51e1e34692bb34, type: 3}
       propertyPath: m_Name
       value: Canvas
