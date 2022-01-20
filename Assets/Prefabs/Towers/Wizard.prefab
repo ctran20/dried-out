@@ -203,6 +203,7 @@ GameObject:
   - component: {fileID: 1604311570802514176}
   - component: {fileID: 1595539509457503054}
   - component: {fileID: 1585534632699618386}
+  - component: {fileID: 7530754638122281154}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -218,11 +219,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1609025147036334488}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 8.24, z: 0}
   m_LocalScale: {x: 38.620407, y: 38.620407, z: 38.620407}
   m_Children: []
-  m_Father: {fileID: 258808303534046005}
-  m_RootOrder: 0
+  m_Father: {fileID: 2095960616634303622}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1595539509457503054
 MeshFilter:
@@ -273,6 +274,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7530754638122281154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609025147036334488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96fd0c6499db23747b8f601ca3648356, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedX: 0
+  speedY: 45
+  speedZ: 0
 --- !u!1 &2275425449002710365
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,7 +319,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 258808303534046005}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!198 &4231499648898309845
 ParticleSystem:
@@ -5104,10 +5120,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 8.24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1604311570802514176}
   - {fileID: 2662185393642882652}
   m_Father: {fileID: 2095960616634303622}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2908972785056147603
 GameObject:
@@ -5141,6 +5156,7 @@ Transform:
   - {fileID: 7353030276507405372}
   - {fileID: 3616054032849546952}
   - {fileID: 1949159522637033419}
+  - {fileID: 1604311570802514176}
   - {fileID: 258808303534046005}
   m_Father: {fileID: 0}
   m_RootOrder: 0
