@@ -50,6 +50,7 @@ MonoBehaviour:
   towerMenu: {fileID: 3218438695038541007}
   cannonPrefab: {fileID: 4031413065968188050, guid: 0933b1b322ba5984aa9f9d325ed30e9a, type: 3}
   archerPrefab: {fileID: 3635999234112455870, guid: cd757cbedf927b44aab3d00765976445, type: 3}
+  wizardPrefab: {fileID: 3799551657678431052, guid: f0df2e732bc4f1f43a128d543507e389, type: 3}
   isPlaceable: 1
 --- !u!65 &6226406340693737524
 BoxCollider:
@@ -77,7 +78,7 @@ GameObject:
   - component: {fileID: 7925073170198204053}
   - component: {fileID: 744472217203356492}
   m_Layer: 5
-  m_Name: Bomber
+  m_Name: Wizard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -184,7 +185,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7925073170198204053}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 630017039518504625}
+        m_TargetAssemblyTypeName: Waypoint, Assembly-CSharp
+        m_MethodName: PlaceWizard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3218438695038541007}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2486487008644394638
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,7 +522,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Bomber
+  m_text: Wizard
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

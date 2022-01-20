@@ -7,6 +7,7 @@ public class Waypoint : MonoBehaviour
     [SerializeField] GameObject towerMenu;
     [SerializeField] Tower cannonPrefab;
     [SerializeField] Tower archerPrefab;
+    [SerializeField] Tower wizardPrefab;
     [SerializeField] bool isPlaceable;
     public bool IsPlaceable{get{return isPlaceable;}}
 
@@ -25,6 +26,12 @@ public class Waypoint : MonoBehaviour
     public void PlaceArcher()
     {
         bool isPlaced = archerPrefab.CreateTower(archerPrefab, transform.position);
+        isPlaceable = !isPlaced;
+    }
+
+    public void PlaceWizard()
+    {
+        bool isPlaced = wizardPrefab.CreateTower(wizardPrefab, transform.position);
         isPlaceable = !isPlaced;
     }
 }
