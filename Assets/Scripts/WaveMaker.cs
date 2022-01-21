@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.IO;
+using System;
 
 public class WaveMaker : MonoBehaviour
 {
@@ -12,12 +12,9 @@ public class WaveMaker : MonoBehaviour
 
     [SerializeField] int[] currWaveInfo;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        string readFromFilePath = Application.streamingAssetsPath + "/Resources/test.txt";
-        List<string> fileLines = File.ReadAllLines(readFromFilePath).ToList();
-    }
+    [SerializeField] int wave;
+    TextAsset textAssetNames;
+    string[] lines;
 
     // Update is called once per frame
     void Update()
@@ -39,5 +36,16 @@ public class WaveMaker : MonoBehaviour
         // 1  10     1   0      0
         // 4  5      5   0      0
         // 0  0      0   30     0
+
+        lines = textAssetNames.text.Split(new string[] { "\n" }, StringSplitOptions.None);
+    }
+
+    void ReadCurrWaveInfo(){
+        int i = 0;
+
+        foreach (string num in lines[wave].Split(char.Parse(" "))) {
+            currWaveInfo[i] = Convert.ToInt32(num);
+            i++;
+        };
     }
 }
