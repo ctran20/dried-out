@@ -7519,7 +7519,7 @@ PrefabInstance:
     - target: {fileID: 630017039518504625, guid: 5892831b82cd14f43b83c1da2501e817, type: 3}
       propertyPath: wizardPrefab
       value: 
-      objectReference: {fileID: -2902630063531866264, guid: 0809ee2156d603c47b126d21b56119f5, type: 3}
+      objectReference: {fileID: 3799551657678431052, guid: f0df2e732bc4f1f43a128d543507e389, type: 3}
     - target: {fileID: 843488146896206577, guid: 5892831b82cd14f43b83c1da2501e817, type: 3}
       propertyPath: m_text
       value: 0,-1
@@ -11666,6 +11666,56 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9147462452417202082, guid: a5d0c86362c7be54a8ed1ab9105f7491, type: 3}
   m_PrefabInstance: {fileID: 1808018317}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1818688236
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1818688238}
+  - component: {fileID: 1818688237}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1818688237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818688236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d95effc3099f3c4ab8f368d02b35e87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: []
+  bossPrefab: []
+  poolSize: 5
+  spawnTimer: 1
+  currWaveInfo: 
+  wave: 0
+  textAssetNames: {fileID: 4900000, guid: 332e6a8ef365ce54fa9d6e3b19488f40, type: 3}
+--- !u!4 &1818688238
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818688236}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.109667, y: 9.510989, z: -11.099697}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1829337823
 PrefabInstance:
   m_ObjectHideFlags: 0
