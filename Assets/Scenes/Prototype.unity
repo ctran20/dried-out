@@ -7516,6 +7516,10 @@ PrefabInstance:
       propertyPath: towerPrefab
       value: 
       objectReference: {fileID: 6966963060510251808, guid: 2dea54ae52e742a48961979cc804e98a, type: 3}
+    - target: {fileID: 630017039518504625, guid: 5892831b82cd14f43b83c1da2501e817, type: 3}
+      propertyPath: wizardPrefab
+      value: 
+      objectReference: {fileID: -2902630063531866264, guid: 0809ee2156d603c47b126d21b56119f5, type: 3}
     - target: {fileID: 843488146896206577, guid: 5892831b82cd14f43b83c1da2501e817, type: 3}
       propertyPath: m_text
       value: 0,-1
