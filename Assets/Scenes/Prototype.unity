@@ -11700,7 +11700,8 @@ MonoBehaviour:
   poolSize: 5
   spawnTimer: 1
   currWaveInfo: 
-  wave: 0
+  currWave: 0
+  waveNum: 0
   textAssetNames: {fileID: 4900000, guid: 332e6a8ef365ce54fa9d6e3b19488f40, type: 3}
 --- !u!4 &1818688238
 Transform:

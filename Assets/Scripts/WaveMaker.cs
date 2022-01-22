@@ -12,12 +12,14 @@ public class WaveMaker : MonoBehaviour
 
     [SerializeField] List<int> currWaveInfo;
 
-    [SerializeField] int wave;
+    [SerializeField] int currWave;
+    [SerializeField] int waveNum;
     [SerializeField] TextAsset textAssetNames;
     string[] lines;
 
     private void Start()
     {
+        currWave = 0;
         ReadTextFile();
         ReadCurrWaveInfo();
     }
@@ -43,13 +45,20 @@ public class WaveMaker : MonoBehaviour
         // 4  5      5   0      0
         // 0  0      0   30     0
 
-        lines = textAssetNames.text.Split('\n'); 
+        lines = textAssetNames.text.Split('\n');
     }
 
     void ReadCurrWaveInfo(){
-        foreach (string num in lines[0].Split('\t')) {
-            Debug.Log(num);
-            currWaveInfo.Add(Convert.ToInt32(num));
-        };
+        waveNum = Convert.ToInt32(lines[currWave]);
+        currWave++;
+
+        for (int i = 0; i < waveNum; i++){
+            foreach (string num in lines[currWave+i].Split('\t'))
+            {
+                Debug.Log(num);
+                currWaveInfo.Add(Convert.ToInt32(num));
+            };
+        }
+        
     }
 }
