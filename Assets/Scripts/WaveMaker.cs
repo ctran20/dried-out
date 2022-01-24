@@ -10,7 +10,7 @@ public class WaveMaker : MonoBehaviour
     [SerializeField] [Range(5, 20)] int poolSize = 5;
     [SerializeField] [Range(0.1f, 30f)] float spawnTimer = 1f;
 
-    [SerializeField] ObjectPool[] enemyIdPool;
+    [SerializeField] ObjectPool[] enemyPool;
 
     [SerializeField] List<int> currWaveInfo;
 
@@ -33,10 +33,24 @@ public class WaveMaker : MonoBehaviour
     }
 
     IEnumerator StartAttack(){
-        for(int i = 0; i < waveNum; i++){
+        int poolId;
+        // currWaveInfo[currWave] pull the current wave info in a line of 5 column
+        // 0      +1     +2  +3     +4
+        // poolID Total  Gap StartF EndF
+        // 1      10     1   0      0
+
+        for (int i = 0; i < waveNum; i++){
+            //Set ID
+            poolId = currWaveInfo[currWave];
+
+            //Set start time filler
             yield return new WaitForSeconds(currWaveInfo[currWave + 3]);
 
-            yield return new WaitForSeconds(currWaveInfo[currWave + 3]);
+            //Start Spawn
+            enemyPool[poolId].StartSpawn(currWaveInfo[currWave+1], currWaveInfo[currWave+2]);
+
+            //Set spawn time delay + end time filler
+            yield return new WaitForSeconds(currWaveInfo[(currWaveInfo[currWave + 1])*(currWaveInfo[currWave + 2]) + currWave + 4]);
         }
     }
 

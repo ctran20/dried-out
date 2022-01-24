@@ -26,15 +26,16 @@ public class ObjectPool : MonoBehaviour
         }
     }
 
-    void Start()
+    public void StartSpawn(int enemyNum, int spawnGap)
     {
-        StartCoroutine(SpawnEnemy());
+        StartCoroutine(SpawnEnemy(enemyNum, spawnGap));
     }
 
-    IEnumerator SpawnEnemy(){
-        while(true){
+    IEnumerator SpawnEnemy(int enemyNum, int spawnGap)
+    {
+        for(int i = 0; i < enemyNum; i++){
             EnableObjectInPool();
-            yield return new WaitForSeconds(spawnTimer);
+            yield return new WaitForSeconds(spawnGap);
         }
     }
 
