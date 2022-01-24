@@ -10,6 +10,8 @@ public class WaveMaker : MonoBehaviour
     [SerializeField] [Range(5, 20)] int poolSize = 5;
     [SerializeField] [Range(0.1f, 30f)] float spawnTimer = 1f;
 
+    [SerializeField] ObjectPool[] enemyIdPool;
+
     [SerializeField] List<int> currWaveInfo;
 
     [SerializeField] int currWave;
@@ -30,8 +32,12 @@ public class WaveMaker : MonoBehaviour
         
     }
 
-    void StartWave(){
-        
+    IEnumerator StartAttack(){
+        for(int i = 0; i < waveNum; i++){
+            yield return new WaitForSeconds(currWaveInfo[currWave + 3]);
+
+            yield return new WaitForSeconds(currWaveInfo[currWave + 3]);
+        }
     }
 
     void ReadTextFile(){
