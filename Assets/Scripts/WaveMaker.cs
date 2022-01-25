@@ -24,6 +24,7 @@ public class WaveMaker : MonoBehaviour
         currWave = 0;
         ReadTextFile();
         ReadCurrWaveInfo();
+        StartCoroutine(StartAttack());
     }
 
     // Update is called once per frame
@@ -38,8 +39,17 @@ public class WaveMaker : MonoBehaviour
         // 0      +1     +2  +3     +4
         // poolID Total  Gap StartF EndF
         // 1      10     1   0      0
+        currWave--;
+        Debug.Log(waveNum);
 
         for (int i = 0; i < waveNum; i++){
+            Debug.Log(currWave);
+            Debug.Log(currWaveInfo[currWave]);
+            Debug.Log(currWaveInfo[currWave + 1]);
+            Debug.Log(currWaveInfo[currWave + 2]);
+            Debug.Log(currWaveInfo[currWave + 3]);
+            Debug.Log(currWaveInfo[currWave + 4]);
+
             //Set ID
             poolId = currWaveInfo[currWave];
 
@@ -50,8 +60,12 @@ public class WaveMaker : MonoBehaviour
             enemyPool[poolId].StartSpawn(currWaveInfo[currWave+1], currWaveInfo[currWave+2]);
 
             //Set spawn time delay + end time filler
-            yield return new WaitForSeconds(currWaveInfo[(currWaveInfo[currWave + 1])*(currWaveInfo[currWave + 2]) + currWave + 4]);
+            yield return new WaitForSeconds(currWaveInfo[currWave + 4] + (currWaveInfo[currWave + 1]) * (currWaveInfo[currWave + 2]));
+
+            currWave += 5;
         }
+
+        Debug.Log("Done");
     }
 
     void ReadTextFile(){
@@ -75,7 +89,7 @@ public class WaveMaker : MonoBehaviour
         for (int i = 0; i < waveNum; i++){
             foreach (string num in lines[currWave+i].Split('\t'))
             {
-                Debug.Log(num);
+                //Debug.Log(num);
                 currWaveInfo.Add(Convert.ToInt32(num));
             };
         }
