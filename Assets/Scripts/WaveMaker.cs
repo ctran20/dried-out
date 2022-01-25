@@ -5,15 +5,8 @@ using System;
 
 public class WaveMaker : MonoBehaviour
 {
-    [SerializeField] GameObject[] enemyPrefab;
-    [SerializeField] GameObject[] bossPrefab;
-    [SerializeField] [Range(5, 20)] int poolSize = 5;
-    [SerializeField] [Range(0.1f, 30f)] float spawnTimer = 1f;
-
     [SerializeField] ObjectPool[] enemyPool;
-
     [SerializeField] List<int> currWaveInfo;
-
     [SerializeField] int currWave;
     [SerializeField] int waveNum;
     [SerializeField] TextAsset textAssetNames;
@@ -37,41 +30,43 @@ public class WaveMaker : MonoBehaviour
         int poolId;
         // currWaveInfo[currWave] pull the current wave info in a line of 5 column
         // 0      +1     +2  +3     +4
-        // poolID Total  Gap StartF EndF
+        // poolID Total  Gap StartD EndD
         // 1      10     1   0      0
+        
+        //Fix currwave!!! please
         currWave--;
         Debug.Log(waveNum);
 
         for (int i = 0; i < waveNum; i++){
-            Debug.Log(currWave);
-            Debug.Log(currWaveInfo[currWave]);
-            Debug.Log(currWaveInfo[currWave + 1]);
-            Debug.Log(currWaveInfo[currWave + 2]);
-            Debug.Log(currWaveInfo[currWave + 3]);
-            Debug.Log(currWaveInfo[currWave + 4]);
+            Debug.Log("Current wave: " + currWave);
+            Debug.Log("Pool ID: " + currWaveInfo[currWave]);
+            Debug.Log("Total enemy: " + currWaveInfo[currWave + 1]);
+            Debug.Log("Spawn gap: " + currWaveInfo[currWave + 2]);
+            Debug.Log("Start delay: " + currWaveInfo[currWave + 3]);
+            Debug.Log("End delay: " + currWaveInfo[currWave + 4] + "\n");
 
             //Set ID
             poolId = currWaveInfo[currWave];
 
-            //Set start time filler
+            //Set start time delay
             yield return new WaitForSeconds(currWaveInfo[currWave + 3]);
 
             //Start Spawn
             enemyPool[poolId].StartSpawn(currWaveInfo[currWave+1], currWaveInfo[currWave+2]);
 
-            //Set spawn time delay + end time filler
+            //Set spawn time delay + end time delay
             yield return new WaitForSeconds(currWaveInfo[currWave + 4] + (currWaveInfo[currWave + 1]) * (currWaveInfo[currWave + 2]));
 
             currWave += 5;
         }
 
-        Debug.Log("Done");
+        Debug.Log("\nAttack Over!\n");
     }
 
     void ReadTextFile(){
         // How Many Enemy Attacks
         // Enemy ID and How Many and Time Gap
-        // Start and End Filler Time
+        // Start and End Delay Time
         // Ex:
         // 3
         // ID Total  Gap StartF EndF
