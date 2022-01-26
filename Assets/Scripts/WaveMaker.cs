@@ -8,15 +8,16 @@ public class WaveMaker : MonoBehaviour
     [SerializeField] ObjectPool[] enemyPool;
     [SerializeField] List<int> currWaveInfo;
     [SerializeField] int currWave;
+    [SerializeField] int currLine;
     [SerializeField] int waveNum;
     [SerializeField] TextAsset textAssetNames;
-    string[] lines;
+    [SerializeField] string[] lines;
 
     private void Start()
     {
         currWave = 0;
+        currLine = 0;
         ReadTextFile();
-        ReadCurrWaveInfo();
         StartCoroutine(StartAttack());
     }
 
@@ -32,9 +33,9 @@ public class WaveMaker : MonoBehaviour
         // 0      +1     +2  +3     +4
         // poolID Total  Gap StartD EndD
         // 1      10     1   0      0
-        
-        //Fix currwave!!! please
-        currWave--;
+
+        ReadCurrWaveInfo();
+
         Debug.Log(waveNum);
 
         for (int i = 0; i < waveNum; i++){
@@ -78,16 +79,18 @@ public class WaveMaker : MonoBehaviour
     }
 
     void ReadCurrWaveInfo(){
-        waveNum = Convert.ToInt32(lines[currWave]);
-        currWave++;
-
+        waveNum = Convert.ToInt32(lines[currLine]);
+        currLine++;
+        currWave = 0;
+        currWaveInfo.Clear();
+        
         for (int i = 0; i < waveNum; i++){
-            foreach (string num in lines[currWave+i].Split('\t'))
+            foreach (string num in lines[currLine+i].Split('\t'))
             {
                 //Debug.Log(num);
                 currWaveInfo.Add(Convert.ToInt32(num));
             };
         }
-        
+        currLine += waveNum;
     }
 }
