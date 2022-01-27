@@ -5,8 +5,9 @@ using System;
 
 public class WaveMaker : MonoBehaviour
 {
+    [SerializeField] GameObject waveButton;
     [SerializeField] ObjectPool[] enemyPool;
-    [SerializeField] List<int> currWaveInfo;
+    [SerializeField] List<int> currAttackInfo;
     [SerializeField] int currWave;
     [SerializeField] int currLine;
     [SerializeField] int waveNum;
@@ -18,49 +19,47 @@ public class WaveMaker : MonoBehaviour
         currWave = 0;
         currLine = 0;
         ReadTextFile();
-        StartCoroutine(StartAttack());
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         
     }
 
-    IEnumerator StartAttack(){
+    public void StartAttack(){
+        ReadCurrAttackInfo();
+        StartCoroutine(SpawnEnemies());
+    }
+
+    IEnumerator SpawnEnemies(){
         int poolId;
-        // currWaveInfo[currWave] pull the current wave info in a line of 5 column
+        // currAttackInfo[currWave] pull the current wave info in a line of 5 column
         // 0      +1     +2  +3     +4
         // poolID Total  Gap StartD EndD
         // 1      10     1   0      0
-
-        ReadCurrWaveInfo();
 
         Debug.Log(waveNum);
 
         for (int i = 0; i < waveNum; i++){
             Debug.Log("Current wave: " + currWave);
-            Debug.Log("Pool ID: " + currWaveInfo[currWave]);
-            Debug.Log("Total enemy: " + currWaveInfo[currWave + 1]);
-            Debug.Log("Spawn gap: " + currWaveInfo[currWave + 2]);
-            Debug.Log("Start delay: " + currWaveInfo[currWave + 3]);
-            Debug.Log("End delay: " + currWaveInfo[currWave + 4] + "\n");
+            Debug.Log("Pool ID: " + currAttackInfo[currWave]);
+            Debug.Log("Total enemy: " + currAttackInfo[currWave + 1]);
+            Debug.Log("Spawn gap: " + currAttackInfo[currWave + 2]);
+            Debug.Log("Start delay: " + currAttackInfo[currWave + 3]);
+            Debug.Log("End delay: " + currAttackInfo[currWave + 4] + "\n");
 
             //Set ID
-            poolId = currWaveInfo[currWave];
+            poolId = currAttackInfo[currWave];
 
             //Set start time delay
-            yield return new WaitForSeconds(currWaveInfo[currWave + 3]);
+            yield return new WaitForSeconds(currAttackInfo[currWave + 3]);
 
             //Start Spawn
-            enemyPool[poolId].StartSpawn(currWaveInfo[currWave+1], currWaveInfo[currWave+2]);
+            enemyPool[poolId].StartSpawn(currAttackInfo[currWave+1], currAttackInfo[currWave+2]);
 
             //Set spawn time delay + end time delay
-            yield return new WaitForSeconds(currWaveInfo[currWave + 4] + (currWaveInfo[currWave + 1]) * (currWaveInfo[currWave + 2]));
+            yield return new WaitForSeconds(currAttackInfo[currWave + 4] + (currAttackInfo[currWave + 1]) * (currAttackInfo[currWave + 2]));
 
             currWave += 5;
         }
 
+        waveButton.SetActive(true);
         Debug.Log("\nAttack Over!\n");
     }
 
@@ -78,17 +77,17 @@ public class WaveMaker : MonoBehaviour
         lines = textAssetNames.text.Split('\n');
     }
 
-    void ReadCurrWaveInfo(){
+    void ReadCurrAttackInfo(){
         waveNum = Convert.ToInt32(lines[currLine]);
         currLine++;
         currWave = 0;
-        currWaveInfo.Clear();
+        currAttackInfo.Clear();
         
         for (int i = 0; i < waveNum; i++){
             foreach (string num in lines[currLine+i].Split('\t'))
             {
                 //Debug.Log(num);
-                currWaveInfo.Add(Convert.ToInt32(num));
+                currAttackInfo.Add(Convert.ToInt32(num));
             };
         }
         currLine += waveNum;
