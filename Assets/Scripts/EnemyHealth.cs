@@ -9,7 +9,8 @@ public class EnemyHealth : MonoBehaviour
 
     [Tooltip("Add amount to hitpoints when enemies die.")]
     [SerializeField] int difficultyRamp = 2;
-    
+    [SerializeField] GameObject armor;
+
     int currentHitPoints = 0;
 
     Enemy enemy;
@@ -23,6 +24,10 @@ public class EnemyHealth : MonoBehaviour
     void OnEnable()
     {
         currentHitPoints = hitPoints;
+
+        if(armor){
+            armor.SetActive(true);
+        }
     }
 
     private void OnParticleCollision(GameObject other)

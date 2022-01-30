@@ -13,6 +13,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.37, y: 0.05, z: 0.37}
   m_Center: {x: 0, y: -0.012866445, z: -0.000000014901165}
+--- !u!114 &3923663800748892959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476386614106663119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c5675eb8c4025640ae57084aec01dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 25
+  currentHitPoints: 0
 --- !u!1001 &475627033542850025
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23,6 +37,10 @@ PrefabInstance:
     - target: {fileID: 1604589689298214, guid: ce3d74eed90a6cb46bc5b7751b0b8e16, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Frisbee_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604589689298214, guid: ce3d74eed90a6cb46bc5b7751b0b8e16, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4095357912128358, guid: ce3d74eed90a6cb46bc5b7751b0b8e16, type: 3}
       propertyPath: m_RootOrder
@@ -46,31 +64,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4095357912128358, guid: ce3d74eed90a6cb46bc5b7751b0b8e16, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.98777235
+      value: 0.866
       objectReference: {fileID: 0}
     - target: {fileID: 4095357912128358, guid: ce3d74eed90a6cb46bc5b7751b0b8e16, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.65895367
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 4095357912128358, guid: ce3d74eed90a6cb46bc5b7751b0b8e16, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8421421
+      value: 0.92387956
       objectReference: {fileID: 0}
     - target: {fileID: 4095357912128358, guid: ce3d74eed90a6cb46bc5b7751b0b8e16, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.53925574
+      value: 0.38268343
       objectReference: {fileID: 0}
     - target: {fileID: 4095357912128358, guid: ce3d74eed90a6cb46bc5b7751b0b8e16, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4095357912128358, guid: ce3d74eed90a6cb46bc5b7751b0b8e16, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4095357912128358, guid: ce3d74eed90a6cb46bc5b7751b0b8e16, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 65.266
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 4095357912128358, guid: ce3d74eed90a6cb46bc5b7751b0b8e16, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -166,6 +184,10 @@ PrefabInstance:
       propertyPath: goldDrop
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 2127485938285068904, guid: 2f3e27eecb190e44a9af50723c394274, type: 3}
+      propertyPath: armor
+      value: 
+      objectReference: {fileID: 476386614106663119}
     - target: {fileID: 2127485938285068904, guid: 2f3e27eecb190e44a9af50723c394274, type: 3}
       propertyPath: hitPoints
       value: 10
