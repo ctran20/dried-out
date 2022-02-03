@@ -48,9 +48,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerMenu: {fileID: 3218438695038541007}
-  cannonPrefab: {fileID: 441273439384283318, guid: 16cab7f7b0430dd44afcbabff8e1135a, type: 3}
+  cannonPrefab: {fileID: 4425472626891355019, guid: c5198252a604c7c4ebea7019f9fd6648, type: 3}
   archerPrefab: {fileID: 3635999234112455870, guid: cd757cbedf927b44aab3d00765976445, type: 3}
-  wizardPrefab: {fileID: 3799551657678431052, guid: f0df2e732bc4f1f43a128d543507e389, type: 3}
+  wizardPrefab: {fileID: 6622422831408552472, guid: 230981c562fc34748b2fc814b3238cd1, type: 3}
   isPlaceable: 1
 --- !u!65 &6226406340693737524
 BoxCollider:
