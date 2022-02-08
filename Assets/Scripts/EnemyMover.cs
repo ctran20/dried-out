@@ -41,7 +41,8 @@ public class EnemyMover : MonoBehaviour
     }
 
     void FinishPath(){
-        enemy.StealGold();
+        //Attack Base
+        enemy.DamageHealth();
         gameObject.SetActive(false);
     }
 
