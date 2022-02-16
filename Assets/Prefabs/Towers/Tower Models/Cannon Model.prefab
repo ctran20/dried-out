@@ -5020,7 +5020,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2095960616634303622}
   - component: {fileID: 6162026841986279324}
-  - component: {fileID: -2902630063531866264}
   m_Layer: 0
   m_Name: Cannon Model
   m_TagString: Untagged
@@ -5061,23 +5060,6 @@ MonoBehaviour:
   weapon: {fileID: 5931614491856592906}
   projectileParticles: {fileID: 4231499648898309845}
   range: 25
---- !u!114 &-2902630063531866264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2908972785056147603}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00fd8acc1f4b16044a267f989ba5fa80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cost: 75
-  level: 0
-  lvl1: {fileID: 0}
-  lvl2: {fileID: 0}
-  lvl3: {fileID: 0}
 --- !u!1 &6664335502770621447
 GameObject:
   m_ObjectHideFlags: 0
