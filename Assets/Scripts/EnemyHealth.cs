@@ -32,11 +32,12 @@ public class EnemyHealth : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
-        ProcessHit();
+        int damage = other.GetComponent<ParticleSystemDamage>().GetDamage();
+        ProcessHit(damage);
     }
 
-    void ProcessHit(){
-        currentHitPoints--;
+    void ProcessHit(int damage){
+        currentHitPoints -= damage;
 
         if(currentHitPoints <= 0){
             gameObject.SetActive(false);

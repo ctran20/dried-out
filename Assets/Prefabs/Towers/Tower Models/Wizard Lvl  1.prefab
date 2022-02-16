@@ -224,6 +224,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wizard Lvl  1
       objectReference: {fileID: 0}
+    - target: {fileID: 3346811575442583540, guid: 3a7476b3e859f6144bcb335bf6edde00, type: 3}
+      propertyPath: particleDamage
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3616054032849546952, guid: 3a7476b3e859f6144bcb335bf6edde00, type: 3}
       propertyPath: m_LocalScale.x
       value: 6.865575
