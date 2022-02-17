@@ -11,6 +11,11 @@ public class Waypoint : MonoBehaviour
     [SerializeField] bool isPlaceable;
     public bool IsPlaceable{get{return isPlaceable;}}
 
+    public void Reset()
+    {
+        isPlaceable = true;
+    }
+
     private void OnMouseDown()
     {
         if(isPlaceable){
@@ -19,19 +24,19 @@ public class Waypoint : MonoBehaviour
     }
 
     public void PlaceCannon(){
-        bool isPlaced = cannonPrefab.CreateTower(cannonPrefab, transform.position);
+        bool isPlaced = cannonPrefab.CreateTower(cannonPrefab, transform);
         isPlaceable = !isPlaced;
     }
 
     public void PlaceArcher()
     {
-        bool isPlaced = archerPrefab.CreateTower(archerPrefab, transform.position);
+        bool isPlaced = archerPrefab.CreateTower(archerPrefab, transform);
         isPlaceable = !isPlaced;
     }
 
     public void PlaceWizard()
     {
-        bool isPlaced = wizardPrefab.CreateTower(wizardPrefab, transform.position);
+        bool isPlaced = wizardPrefab.CreateTower(wizardPrefab, transform);
         isPlaceable = !isPlaced;
     }
 }

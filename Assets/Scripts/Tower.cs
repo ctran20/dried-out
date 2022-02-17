@@ -19,6 +19,7 @@ public class Tower : MonoBehaviour
     public void Recycle(){
         Bank bank = FindObjectOfType<Bank>();
         bank.Deposit(45);
+        gameObject.GetComponentInParent<Waypoint>().Reset();
         Destroy(gameObject);
     }
 
@@ -56,7 +57,7 @@ public class Tower : MonoBehaviour
         level++;
     }
 
-    public bool CreateTower(Tower tower, Vector3 position){
+    public bool CreateTower(Tower tower, Transform tile){
         Bank bank = FindObjectOfType<Bank>();
 
         if(bank == null){
@@ -64,7 +65,8 @@ public class Tower : MonoBehaviour
         }
 
         if(bank.CurrentBalance >= cost){
-            Instantiate(tower.gameObject, position, Quaternion.identity);
+            GameObject towerGO = Instantiate(tower.gameObject, tile.position, Quaternion.identity);
+            towerGO.transform.SetParent(tile);
             bank.Withdraw(cost);
             return true;
         }else{
