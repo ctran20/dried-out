@@ -9,6 +9,14 @@ public class TargetLocator : MonoBehaviour
     [SerializeField] ParticleSystem projectileParticles;
     [SerializeField] float range = 25f;
     Transform target;
+    bool targeting;
+
+    private void Start()
+    {
+        targeting = false;
+        var emissionModule = projectileParticles.emission;
+        emissionModule.enabled = false;
+    }
 
     private void Update()
     {
@@ -19,35 +27,35 @@ public class TargetLocator : MonoBehaviour
     private void FindClosestTarget()
     {
         EnemyCenter[] enemies = FindObjectsOfType<EnemyCenter>();
-        Transform closestTarget = null;
-        float maxDistance = Mathf.Infinity;
+        if(enemies.Length > 0){
+            foreach (EnemyCenter enemy in enemies)
+            {
+                float targetDistance = Vector3.Distance(transform.position, enemy.transform.position);
 
-        foreach(EnemyCenter enemy in enemies){
-            float targetDistance = Vector3.Distance(transform.position, enemy.transform.position);
-
-            if(targetDistance < maxDistance){
-                closestTarget = enemy.transform;
-                maxDistance = targetDistance;
+                if (targetDistance < range)
+                {
+                    target = enemy.transform;
+                    Attack(true);
+                    break;
+                }else{
+                    Attack(false);
+                }
             }
-        }
-
-        target = closestTarget;
-    }
-
-    private void AimWeapon()
-    {
-        float targetDistance = Vector3.Distance(transform.position, target.position);
-        weapon.LookAt(target);
-
-        if (targetDistance < range){
-            Attack(true);
-        }
-        else{
+        }else{
             Attack(false);
         }
     }
 
+    private void AimWeapon()
+    {
+        if (targeting)
+        {
+            weapon.LookAt(target);
+        }
+    }
+
     void Attack(bool isActive){
+        targeting = isActive;
         var emissionModule = projectileParticles.emission;
         emissionModule.enabled = isActive;
     }
