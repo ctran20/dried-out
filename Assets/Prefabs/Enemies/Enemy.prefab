@@ -844,7 +844,7 @@ GameObject:
   - component: {fileID: 657139302648914557}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -931,6 +931,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitPoints: 6
   difficultyRamp: 1
+  armor: {fileID: 0}
 --- !u!114 &657139302648914557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -944,7 +945,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goldDrop: 10
-  penalty: 25
 --- !u!1 &1326360802897878
 GameObject:
   m_ObjectHideFlags: 0

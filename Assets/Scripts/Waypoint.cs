@@ -8,6 +8,7 @@ public class Waypoint : MonoBehaviour
     [SerializeField] Tower cannonPrefab;
     [SerializeField] Tower archerPrefab;
     [SerializeField] Tower wizardPrefab;
+    [SerializeField] Tower spikePrefab;
     [SerializeField] bool isPlaceable;
     public bool IsPlaceable{get{return isPlaceable;}}
 
@@ -21,6 +22,12 @@ public class Waypoint : MonoBehaviour
         if(isPlaceable){
             towerMenu.SetActive(true);
         }
+    }
+
+    public void PlaceSpike()
+    {
+        bool isPlaced = spikePrefab.CreateTower(spikePrefab, transform);
+        isPlaceable = !isPlaced;
     }
 
     public void PlaceCannon(){

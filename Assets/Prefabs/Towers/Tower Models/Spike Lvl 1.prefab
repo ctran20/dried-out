@@ -95,6 +95,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spike Lvl 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2939129457524285401, guid: 0809ee2156d603c47b126d21b56119f5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939129457524285401, guid: 0809ee2156d603c47b126d21b56119f5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939129457524285401, guid: 0809ee2156d603c47b126d21b56119f5, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 4928319117837153515, guid: 0809ee2156d603c47b126d21b56119f5, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.4
