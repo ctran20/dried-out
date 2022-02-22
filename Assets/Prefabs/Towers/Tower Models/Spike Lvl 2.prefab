@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1509626128728277565, guid: 0809ee2156d603c47b126d21b56119f5, type: 3}
+      propertyPath: damage
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1268353504563635036, guid: 0809ee2156d603c47b126d21b56119f5, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.6292101
@@ -110,6 +114,10 @@ PrefabInstance:
     - target: {fileID: 2908972785056147603, guid: 0809ee2156d603c47b126d21b56119f5, type: 3}
       propertyPath: m_Name
       value: Spike Lvl 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645360230488098480, guid: 0809ee2156d603c47b126d21b56119f5, type: 3}
+      propertyPath: damage
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4928319117837153515, guid: 0809ee2156d603c47b126d21b56119f5, type: 3}
       propertyPath: m_LocalScale.x

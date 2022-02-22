@@ -393,6 +393,7 @@ GameObject:
   - component: {fileID: 658717043497281845}
   - component: {fileID: 8860227311628390580}
   - component: {fileID: 3645360230488098480}
+  - component: {fileID: 8070046177888839862}
   m_Layer: 0
   m_Name: Spike Trigger
   m_TagString: Untagged
@@ -408,8 +409,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5463131786303978884}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.746, z: 0}
-  m_LocalScale: {x: 4.5645165, y: 0.9782275, z: 4.5645165}
+  m_LocalPosition: {x: 0, y: 1.4212, z: 0}
+  m_LocalScale: {x: 4.5645165, y: 2.3285728, z: 4.5645165}
   m_Children: []
   m_Father: {fileID: 2095960616634303622}
   m_RootOrder: 2
@@ -429,7 +430,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5463131786303978884}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -488,6 +489,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 892ada8c14c220d4482240efd8dd7e06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 2
+--- !u!54 &8070046177888839862
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5463131786303978884}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &5769940701109234880
 GameObject:
   m_ObjectHideFlags: 0
