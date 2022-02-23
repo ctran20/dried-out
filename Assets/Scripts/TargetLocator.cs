@@ -9,6 +9,7 @@ public class TargetLocator : MonoBehaviour
     [SerializeField] ParticleSystem projectileParticles;
     [SerializeField] float range = 25f;
     Transform target;
+    GameObject currTarget;
     bool targeting;
 
     private void Start()
@@ -26,21 +27,27 @@ public class TargetLocator : MonoBehaviour
 
     private void FindClosestTarget()
     {
+        // PAY ATTENTION! These are CENTERS, a child of the Enemy GameObject
         EnemyCenter[] enemies = FindObjectsOfType<EnemyCenter>();
         if(enemies.Length > 0){
-            foreach (EnemyCenter enemy in enemies)
-            {
-                float targetDistance = Vector3.Distance(transform.position, enemy.transform.position);
-
-                if (targetDistance < range)
+            if(!target || !target.parent.gameObject.activeSelf || Vector3.Distance(transform.position, target.position) > range){
+                foreach (EnemyCenter enemy in enemies)
                 {
-                    target = enemy.transform;
-                    Attack(true);
-                    break;
-                }else{
-                    Attack(false);
+                    float targetDistance = Vector3.Distance(transform.position, enemy.transform.position);
+
+                    if (targetDistance <= range)
+                    {
+                        target = enemy.transform;
+                        Attack(true);
+                        break;
+                    }
+                    else
+                    {
+                        Attack(false);
+                    }
                 }
             }
+            
         }else{
             Attack(false);
         }
