@@ -12,10 +12,12 @@ public class EnemyHealth : MonoBehaviour
     bool damaging;
     bool poisoned;
     int poisonDamage;
+    ParticleSystem damagefx;
     Enemy enemy;
 
     private void Start()
     {
+        damagefx = GetComponentInChildren<ParticleSystem>();
         enemy = GetComponent<Enemy>();
         poisonDamage = 0;
         poisoned = false;
@@ -50,7 +52,7 @@ public class EnemyHealth : MonoBehaviour
 
     void ProcessHit(int damage){
         currentHitPoints -= damage;
-
+        damagefx.Play();
         if(currentHitPoints <= 0){
             gameObject.SetActive(false);
             hitPoints += 1;
