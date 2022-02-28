@@ -4871,6 +4871,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4966341056781146, guid: 2f3e27eecb190e44a9af50723c394274, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 95787105524477528, guid: 2f3e27eecb190e44a9af50723c394274, type: 3}
       propertyPath: m_Controller
       value: 
@@ -4882,6 +4886,10 @@ PrefabInstance:
     - target: {fileID: 2127485938285068904, guid: 2f3e27eecb190e44a9af50723c394274, type: 3}
       propertyPath: hitPoints
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7185937970314254829, guid: 2f3e27eecb190e44a9af50723c394274, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.406
       objectReference: {fileID: 0}
     - target: {fileID: 7745110923978959320, guid: 2f3e27eecb190e44a9af50723c394274, type: 3}
       propertyPath: speed

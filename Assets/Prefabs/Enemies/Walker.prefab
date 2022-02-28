@@ -371,6 +371,10 @@ PrefabInstance:
       propertyPath: hitPoints
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7185937970314254829, guid: 2f3e27eecb190e44a9af50723c394274, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.99
+      objectReference: {fileID: 0}
     - target: {fileID: 7745110923978959320, guid: 2f3e27eecb190e44a9af50723c394274, type: 3}
       propertyPath: speed
       value: 0.4

@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 4d1c11ecf91c18d4e86d3818e8c650cc, type: 2}
     - target: {fileID: 258808303534046005, guid: 3a7476b3e859f6144bcb335bf6edde00, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.75
+      value: 4.38
       objectReference: {fileID: 0}
     - target: {fileID: 1124380910855154562, guid: 3a7476b3e859f6144bcb335bf6edde00, type: 3}
       propertyPath: m_IsActive
@@ -101,15 +101,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2662185393642882652, guid: 3a7476b3e859f6144bcb335bf6edde00, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.36
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2908972785056147603, guid: 3a7476b3e859f6144bcb335bf6edde00, type: 3}
       propertyPath: m_Name
       value: Wizard Lvl 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3346811575442583540, guid: 3a7476b3e859f6144bcb335bf6edde00, type: 3}
+      propertyPath: particleDamage
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4231499648898309845, guid: 3a7476b3e859f6144bcb335bf6edde00, type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 1.5
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231499648898309845, guid: 3a7476b3e859f6144bcb335bf6edde00, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].cycleCount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231499648898309845, guid: 3a7476b3e859f6144bcb335bf6edde00, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7353030276507405372, guid: 3a7476b3e859f6144bcb335bf6edde00, type: 3}
       propertyPath: m_LocalScale.x
