@@ -365,11 +365,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 657139302648914557, guid: 2f3e27eecb190e44a9af50723c394274, type: 3}
       propertyPath: goldDrop
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2127485938285068904, guid: 2f3e27eecb190e44a9af50723c394274, type: 3}
       propertyPath: hitPoints
-      value: 30
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 7185937970314254829, guid: 2f3e27eecb190e44a9af50723c394274, type: 3}
       propertyPath: m_LocalPosition.y

@@ -217,6 +217,10 @@ PrefabInstance:
       propertyPath: lvl3
       value: 
       objectReference: {fileID: 6911539753245674705}
+    - target: {fileID: 441273439384283318, guid: fba52517a092f5049a2c5f9d19931c37, type: 3}
+      propertyPath: towerCost
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 441273439384283319, guid: fba52517a092f5049a2c5f9d19931c37, type: 3}
       propertyPath: m_RootOrder
       value: 0

@@ -26,24 +26,24 @@ public class Waypoint : MonoBehaviour
 
     public void PlaceSpike()
     {
-        bool isPlaced = spikePrefab.CreateTower(spikePrefab, transform);
+        bool isPlaced = spikePrefab.CreateTower(spikePrefab, transform, 200);
         isPlaceable = !isPlaced;
     }
 
     public void PlaceCannon(){
-        bool isPlaced = cannonPrefab.CreateTower(cannonPrefab, transform);
+        bool isPlaced = cannonPrefab.CreateTower(cannonPrefab, transform, 75);
         isPlaceable = !isPlaced;
     }
 
     public void PlaceArcher()
     {
-        bool isPlaced = archerPrefab.CreateTower(archerPrefab, transform);
+        bool isPlaced = archerPrefab.CreateTower(archerPrefab, transform, 75);
         isPlaceable = !isPlaced;
     }
 
     public void PlaceWizard()
     {
-        bool isPlaced = wizardPrefab.CreateTower(wizardPrefab, transform);
+        bool isPlaced = wizardPrefab.CreateTower(wizardPrefab, transform, 150);
         isPlaceable = !isPlaced;
     }
 }

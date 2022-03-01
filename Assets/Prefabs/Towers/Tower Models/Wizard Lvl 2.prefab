@@ -117,7 +117,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4231499648898309845, guid: 3a7476b3e859f6144bcb335bf6edde00, type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].cycleCount
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4231499648898309845, guid: 3a7476b3e859f6144bcb335bf6edde00, type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar

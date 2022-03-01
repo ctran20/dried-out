@@ -67,6 +67,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2264685343265811033, guid: cfeb79abf2705ab43bcef53b68112b2e, type: 3}
+      propertyPath: particleDamage
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2662185393642882652, guid: cfeb79abf2705ab43bcef53b68112b2e, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
-    [SerializeField] int cost = 75;
     [SerializeField] int level;
+    [SerializeField] int towerCost = 75;
 
     [SerializeField] GameObject lvl1;
     [SerializeField] GameObject lvl2;
@@ -31,10 +31,11 @@ public class Tower : MonoBehaviour
             return;
         }
 
-        if (bank.CurrentBalance >= cost)
+        if (bank.CurrentBalance >= towerCost)
         {
             SwapTower();
-            bank.Withdraw(cost);
+            bank.Withdraw(towerCost);
+            towerCost += 100;
         }
         else{
             //Alert insufficient balance
@@ -57,7 +58,7 @@ public class Tower : MonoBehaviour
         level++;
     }
 
-    public bool CreateTower(Tower tower, Transform tile){
+    public bool CreateTower(Tower tower, Transform tile, int cost){
         Bank bank = FindObjectOfType<Bank>();
 
         if(bank == null){
