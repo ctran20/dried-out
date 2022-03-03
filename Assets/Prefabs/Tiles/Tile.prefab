@@ -51,6 +51,7 @@ MonoBehaviour:
   cannonPrefab: {fileID: 4425472626891355019, guid: c5198252a604c7c4ebea7019f9fd6648, type: 3}
   archerPrefab: {fileID: 7868808490307945368, guid: 159f37f9d3efcd8439313ce287b2d943, type: 3}
   wizardPrefab: {fileID: 6622422831408552472, guid: 230981c562fc34748b2fc814b3238cd1, type: 3}
+  spikePrefab: {fileID: 0}
   isPlaceable: 1
 --- !u!65 &6226406340693737524
 BoxCollider:
@@ -618,8 +619,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4407100275929724169}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5, y: 0, z: -5}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: -4.9965, y: -0, z: -4.9964}
+  m_LocalScale: {x: 1.9985895, y: 1.9985895, z: 1.9985895}
   m_Children: []
   m_Father: {fileID: 1107127629300330159}
   m_RootOrder: 1
