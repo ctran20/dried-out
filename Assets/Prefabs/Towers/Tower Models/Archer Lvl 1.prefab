@@ -69,11 +69,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4231499648898309845, guid: cfeb79abf2705ab43bcef53b68112b2e, type: 3}
       propertyPath: CollisionModule.radiusScale
-      value: 0.5
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4231499648898309845, guid: cfeb79abf2705ab43bcef53b68112b2e, type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4231499648898309845, guid: cfeb79abf2705ab43bcef53b68112b2e, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar

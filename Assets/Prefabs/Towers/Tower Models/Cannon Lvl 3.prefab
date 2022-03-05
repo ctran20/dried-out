@@ -80,6 +80,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4231499648898309845, guid: 97c9600623a154d44bd342a26feee6a0, type: 3}
+      propertyPath: CollisionModule.radiusScale
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231499648898309845, guid: 97c9600623a154d44bd342a26feee6a0, type: 3}
       propertyPath: TrailModule.lifetime.scalar
       value: 0.12
       objectReference: {fileID: 0}
@@ -93,7 +97,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4231499648898309845, guid: 97c9600623a154d44bd342a26feee6a0, type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4231499648898309845, guid: 97c9600623a154d44bd342a26feee6a0, type: 3}
       propertyPath: TrailModule.sizeAffectsLifetime
