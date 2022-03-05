@@ -25,23 +25,24 @@ public class ObjectPool : MonoBehaviour
         }
     }
 
-    public void StartSpawn(int enemyNum, int spawnGap)
+    public void StartSpawn(int enemyNum, int spawnGap, int pathNum)
     {
-        StartCoroutine(SpawnEnemy(enemyNum, spawnGap));
+        StartCoroutine(SpawnEnemy(enemyNum, spawnGap, pathNum));
     }
 
-    IEnumerator SpawnEnemy(int enemyNum, int spawnGap)
+    IEnumerator SpawnEnemy(int enemyNum, int spawnGap,int pathNum)
     {
         for(int i = 0; i < enemyNum; i++){
-            EnableObjectInPool();
+            EnableObjectInPool(pathNum);
             yield return new WaitForSeconds(spawnGap);
         }
     }
 
-    private void EnableObjectInPool()
+    private void EnableObjectInPool(int pathNum)
     {
         for(int i = 0; i < pool.Length; i++){
             if(pool[i].activeInHierarchy == false){
+                pool[i].GetComponent<EnemyMover>().SetPath(pathNum);
                 pool[i].SetActive(true);
                 return;
             }

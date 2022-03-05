@@ -9,6 +9,7 @@ public class EnemyMover : MonoBehaviour
     [SerializeField] List<Waypoint> path = new List<Waypoint>();
 
     Enemy enemy;
+    string pathTag = "Path1";
 
     private void Start()
     {
@@ -22,10 +23,15 @@ public class EnemyMover : MonoBehaviour
         StartCoroutine(FollowPath());
     }
 
+    public void SetPath(int pathN)
+    {
+        pathTag = "Path" + pathN;
+    }
+
     void FindPath(){
         path.Clear();
 
-        GameObject parent = GameObject.FindGameObjectWithTag("Path");
+        GameObject parent = GameObject.FindGameObjectWithTag(pathTag);
 
         foreach(Transform child in parent.transform){
             Waypoint waypoint = child.GetComponent<Waypoint>();

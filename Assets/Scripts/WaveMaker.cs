@@ -5,6 +5,7 @@ using System;
 
 public class WaveMaker : MonoBehaviour
 {
+    [SerializeField] int pathNum = 1;
     [SerializeField] GameObject waveButton;
     [SerializeField] ObjectPool[] enemyPool;
     [SerializeField] List<int> currAttackInfo;
@@ -51,7 +52,7 @@ public class WaveMaker : MonoBehaviour
             yield return new WaitForSeconds(currAttackInfo[currWave + 3]);
 
             //Start Spawn
-            enemyPool[poolId].StartSpawn(currAttackInfo[currWave+1], currAttackInfo[currWave+2]);
+            enemyPool[poolId].StartSpawn(currAttackInfo[currWave+1], currAttackInfo[currWave+2], pathNum);
 
             //Set spawn time delay + end time delay
             yield return new WaitForSeconds(currAttackInfo[currWave + 4] + (currAttackInfo[currWave + 1]) * (currAttackInfo[currWave + 2]));

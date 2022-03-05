@@ -5,8 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Center
-  - Path
   - Enemy
+  - Path1
+  - Path2
   layers:
   - Default
   - TransparentFX
