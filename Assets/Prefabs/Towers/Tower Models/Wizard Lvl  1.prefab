@@ -265,16 +265,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4231499648898309845, guid: 3a7476b3e859f6144bcb335bf6edde00, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231499648898309845, guid: 3a7476b3e859f6144bcb335bf6edde00, type: 3}
       propertyPath: CollisionModule.radiusScale
       value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4231499648898309845, guid: 3a7476b3e859f6144bcb335bf6edde00, type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4231499648898309845, guid: 3a7476b3e859f6144bcb335bf6edde00, type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].cycleCount
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4231499648898309845, guid: 3a7476b3e859f6144bcb335bf6edde00, type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
