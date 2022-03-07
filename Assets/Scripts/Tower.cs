@@ -34,8 +34,8 @@ public class Tower : MonoBehaviour
         if (bank.CurrentBalance >= towerCost)
         {
             SwapTower();
-            bank.Withdraw(towerCost);
             towerCost += 100;
+            bank.Withdraw(towerCost);
         }
         else{
             //Alert insufficient balance
