@@ -31,7 +31,7 @@ public class Tower : MonoBehaviour
             return;
         }
 
-        if (bank.CurrentBalance >= towerCost)
+        if (bank.CurrentBalance >= towerCost+100)
         {
             SwapTower();
             towerCost += 100;
