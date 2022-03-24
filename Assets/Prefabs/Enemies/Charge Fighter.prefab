@@ -12418,7 +12418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2d05c3d3fbc6da489c6cf2d999674d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 8
+  hitPoints: 6
   armor: {fileID: 0}
 --- !u!114 &6496219985134674306
 MonoBehaviour:
